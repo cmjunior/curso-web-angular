@@ -1,0 +1,16 @@
+.botao {
+    margin: 12px;
+    padding: 12px 8px;
+    background-color: $azul-background;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    span {
+        font-size: 14px;
+        color: white;
+    }
+
+    &:hover {
+        background-color: $azul-background-hover;
+    }
+}

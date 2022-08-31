@@ -1,3 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-$azul-background: rgb(6, 6, 40);
-$azul-background-hover: rgb(28, 28, 169);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;600;800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}

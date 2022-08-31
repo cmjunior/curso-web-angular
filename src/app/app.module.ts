@@ -7,16 +7,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BotaoComponent } from './botao/botao.component';
 
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { CardComponent } from './card/card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BotaoComponent
+    BotaoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
 <app-header titulo="Projeto Connor"></app-header>
 
-<div class="titulo">Projeto Angular</div>
-<br>
+<div [ngStyle]="{'color': colorRed ? 'red' : 'green'}" class="titulo">Projeto Angular</div>
+<input type="checkbox" [(ngModel)]="colorRed" />

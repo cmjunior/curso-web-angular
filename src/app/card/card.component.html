@@ -1,0 +1,22 @@
+<p-card [style]="{'width': '15vw', 'background-color': showImage ? '#E6F2ED' : '#FFF'}">
+    <div class="flex flex-column">
+        <div class="w-100 flex flex-row justify-content-between">
+            <button
+                *ngIf="!showImage"
+                pButton pRipple 
+                type="button" icon="pi pi-arrow-right" 
+                class="p-button-rounded p-button-outlined"></button>
+            <div>
+                <span class="text-xl font-light">{{ texto }}</span><br/>
+                <span class="text-xl font-semibold">{{ textoBold }}</span>
+            </div>   
+        </div>
+        <div *ngIf="showImage" class="w-100 flex flex-row justify-content-between align-content-end">
+            <img class="img-card" src="assets/usercard.png" >
+            <button pButton pRipple 
+                type="button" 
+                icon="pi pi-angle-right" 
+                class="p-button-success p-button-rounded"></button>            
+        </div>
+    </div>
+</p-card>

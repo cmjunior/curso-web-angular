@@ -1,4 +1,4 @@
-import { ElementRef, Directive, Input, HostListener, Renderer2 } from '@angular/core';
+import { Directive, Input, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
     selector: '[enterAsTab]'

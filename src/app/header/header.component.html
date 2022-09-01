@@ -1,17 +1,9 @@
-<div class="flex flex-row">
-    <app-card *ngFor="let botao of botoes"
-        [style]="{'margin-right': '12px'}" 
-        [texto]="botao.texto" 
-        [textoBold]="botao.textoBold">
-    </app-card>
-</div>
-
-<div class="flex flex-column">
-    <app-card 
-        [style]="{'margin-top': '12px'}"
-        [showImage]="true" 
-        *ngFor="let botao of botoes" 
-        [texto]="botao.texto" 
-        [textoBold]="botao.textoBold">
-    </app-card>
+<div class="bg-center bg-no-repeat w-full" style="background-image: url('./assets/bg-image3.png'); background-size: 100vw; height: 20vw; position: fixed;">
+    <div class="flex flex-row cards-container">
+        <app-card *ngFor="let botao of botoes"
+            [style]="{'margin-right': '12px'}" 
+            [texto]="botao.texto" 
+            [textoBold]="botao.textoBold">
+        </app-card>
+    </div>
 </div>

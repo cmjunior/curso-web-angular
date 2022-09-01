@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
 
   botoes: TextoBotoes[] = 
   [
-    { texto: 'Ministério da ', textoBold: 'Economia'}, 
-    { texto: 'Acesso à ', textoBold: 'Imprensa'}, 
-    { texto: 'Canais de ', textoBold: 'Negócios'}
+    { texto: 'Início', textoBold: ''}, 
+    { texto: 'Recente', textoBold: ''}, 
+    { texto: 'Matérias', textoBold: ''}
   ]
 
   constructor() { }

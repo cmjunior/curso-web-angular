@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CepService } from './shared/cep.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'curso-web';
   colorRed = false;
+
+  constructor(
+    private cepService: CepService
+  ) {}
 }

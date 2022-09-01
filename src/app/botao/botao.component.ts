@@ -1,4 +1,6 @@
+import { CepService } from './../shared/cep.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-botao',
@@ -6,10 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./botao.component.scss']
 })
 export class BotaoComponent implements OnInit {
-  @Input() texto = '';
+  @Input() texto: string = '';
   @Output() clicked = new EventEmitter();
   
-  constructor() { }
+  constructor(
+    private cepService: CepService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }

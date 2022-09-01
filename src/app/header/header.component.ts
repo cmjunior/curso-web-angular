@@ -2,7 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface TextoBotoes {
   texto: string,
-  textoBold: string
+  textoBold: string,
+  link: string
 }
 
 @Component({
@@ -15,9 +16,10 @@ export class HeaderComponent implements OnInit {
 
   botoes: TextoBotoes[] = 
   [
-    { texto: 'Início', textoBold: ''}, 
-    { texto: 'Recente', textoBold: ''}, 
-    { texto: 'Matérias', textoBold: ''}
+    { texto: 'Início', textoBold: '', link: ''}, 
+    { texto: 'Recente', textoBold: '', link: ''}, 
+    { texto: 'Matérias', textoBold: '', link: ''},
+    { texto: 'Cadastro', textoBold: '', link: 'cadastro'}
   ]
 
   constructor() { }

@@ -1,4 +1,7 @@
-<app-header titulo="Projeto Connor"></app-header>
-
-<div [ngStyle]="{'color': colorRed ? 'red' : 'green'}" class="titulo">Projeto Angular</div>
-<input type="checkbox" [(ngModel)]="colorRed" />
+<div class="flex flex-column">
+    <app-header titulo="Projeto Connor"></app-header>
+    
+    <div style="margin-top: 450px">
+        <router-outlet></router-outlet>
+    </div>
+</div>

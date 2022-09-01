@@ -1,9 +1,11 @@
 <div class="bg-center bg-no-repeat w-full" style="background-image: url('./assets/bg-image3.png'); background-size: 100vw; height: 20vw; position: fixed;">
     <div class="flex flex-row cards-container">
         <app-card *ngFor="let botao of botoes"
+            [routerLink]="botao.link"
             [style]="{'margin-right': '12px'}" 
             [texto]="botao.texto" 
-            [textoBold]="botao.textoBold">
+            [textoBold]="botao.textoBold"
+            [linkBotao]="botao.link">
         </app-card>
     </div>
 </div>

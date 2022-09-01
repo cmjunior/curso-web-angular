@@ -1,7 +1,8 @@
-<p-card [style]="{'width': '15vw', 'background-color': showImage ? '#E6F2ED' : '#FFF'}">
+<p-card [style]="{'cursor': 'pointer', 'width': '15vw', 'background-color': showImage ? '#E6F2ED' : '#FFF'}">
     <div class="flex flex-column">
         <div class="w-100 flex flex-row justify-content-between">
             <button
+                (click)="onNavigate()"
                 *ngIf="!showImage"
                 pButton pRipple 
                 type="button" icon="pi pi-arrow-right" 
@@ -13,7 +14,8 @@
         </div>
         <div *ngIf="showImage" class="w-100 flex flex-row justify-content-between align-content-end">
             <img class="img-card" src="assets/usercard.png" >
-            <button pButton pRipple 
+            <button pButton pRipple
+                (click)="onNavigate()" 
                 type="button" 
                 icon="pi pi-angle-right" 
                 class="p-button-success p-button-rounded"></button>            

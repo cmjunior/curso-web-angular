@@ -4,8 +4,14 @@ import { CommonModule } from '@angular/common';
 
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+import { ToastModule } from 'primeng/toast';
+
 import { CpfCnpjDirective } from './cpf-cnpj.directive';
 import { FormatarPipe } from './formatar.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,14 +22,24 @@ import { FormatarPipe } from './formatar.pipe';
   imports: [
     CommonModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule,
+    InputTextModule,
+    PasswordModule,
+    ReactiveFormsModule,
+    ToastModule
   ],
   exports: [
     CardModule,
     ButtonModule,
     CpfCnpjDirective,
     EnterAsTabDirective,
-    FormatarPipe
+    FormatarPipe,
+    HttpClientModule,
+    InputTextModule,
+    PasswordModule,
+    ReactiveFormsModule,
+    ToastModule
   ]
 })
 export class SharedModule { }

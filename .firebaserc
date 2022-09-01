@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "curso-web-26c2b": {
+      "hosting": {
+        "curso-web": [
+          "curso-web-26c2b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "curso-web-26c2b"
+  }
+}

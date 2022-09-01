@@ -1,0 +1,29 @@
+<div class="flex flex-column flex-grow-1 flex align-items-center justify-content-center bg-gray-200">
+    <div class="fadein animation-duration-500 p-4 w-3">
+        <div class="text-center mb-5">
+            <div class="font-bold text-900 text-3xl font-medium mb-3">Cadastro de Usuário</div>
+        </div>
+    
+        <form [formGroup]="form">
+            <label for="email" class="block text-900 font-medium mb-2">Nome</label>
+            <input [enterAsTab]="documento" class="w-full" pInputText formControlName="nome" autocomplete="off" >
+
+            <label for="documento" class="block text-900 font-medium mb-2">CPF ou CNPJ</label>
+            <input #documento [enterAsTab]="cep" class="w-full" cpfCnpj pInputText formControlName="nome" autocomplete="off" >
+
+            <label for="cep" class="block text-900 font-medium mb-2">CEP</label>
+            <input #cep [enterAsTab]="endereco" class="w-full" pInputText formControlName="cep" autocomplete="off" >
+            
+            <label for="endereco" class="block text-900 font-medium mb-2">Endereço</label>
+            <input #endereco [enterAsTab]="email" class="w-full" pInputText formControlName="endereco" autocomplete="off" >
+            
+            <label for="email" class="block text-900 font-medium mb-2">E-mail</label>
+            <input #email [enterAsTab]="password" class="w-full" id="email" formControlName="email" type="text" pInputText autocomplete="off">
+            
+            <label for="password" class="block text-900 font-medium mb-2">Senha</label>
+            <input #password class="w-full mb-3" formControlName="senha" type="password" pPassword />
+            
+            <button (click)="onSalvarUsuario()" pButton pRipple label="Cadastrar" icon="pi pi-user" class="w-full font-bold" [disabled]="!form.valid"></button>
+        </form>
+    </div>
+</div>

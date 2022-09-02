@@ -3,22 +3,14 @@
         (click)="doScrollBack()" 
         [style.top.px]="buttonTopPosition" 
         class="circle-button start">
-        <button
-            pButton pRipple
-            type="button" icon="pi pi-arrow-left" 
-            class="p-button-rounded p-button-outlined">
-        </button>
+        <i class="pi pi-arrow-left"></i>           
     </div>
     
     <div *ngIf="scrollLeft !== scrollLeftMax" 
         (click)="doScrollForward()"
         [style.top.px]="buttonTopPosition" 
         class="circle-button end">
-        <button
-            pButton pRipple
-            type="button" icon="pi pi-arrow-right" 
-            class="p-button-rounded p-button-outlined">
-        </button>
+        <i class="pi pi-arrow-right"></i>        
     </div>
     
     <div #slider class="slider-container">        

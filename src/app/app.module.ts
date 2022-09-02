@@ -21,12 +21,12 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     BotaoComponent,    
     MainComponent, 
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    
     SharedModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => {

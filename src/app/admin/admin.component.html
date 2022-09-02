@@ -1,1 +1,16 @@
-<p>AREA RESTRITA</p>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>CEP</th>
+        <th>Documento</th>
+        <th>E-Mail</th>
+        <th>Endereco</th>
+    </tr>
+    <tr *ngFor="let usuario of usuarios$ | async">
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.cep}}</td>
+        <td>{{usuario.documento}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.endereco}}</td>
+    </tr>    
+</table>

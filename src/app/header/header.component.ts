@@ -19,7 +19,8 @@ export class HeaderComponent implements OnInit {
     { texto: 'Início', textoBold: '', link: ''}, 
     { texto: 'Recente', textoBold: '', link: ''}, 
     { texto: 'Matérias', textoBold: '', link: ''},
-    { texto: 'Cadastro', textoBold: '', link: 'cadastro'}
+    { texto: 'Cadastro', textoBold: '', link: 'cadastro'},
+    { texto: 'Area', textoBold: 'Administrativa', link: 'admin'}
   ]
 
   constructor() { }

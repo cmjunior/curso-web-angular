@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { addDoc, Firestore, collectionData, collection, CollectionReference, DocumentData, doc, docData, setDoc } from '@angular/fire/firestore';
-
+import { Firestore, collection, doc, setDoc, collectionData } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +25,9 @@ export class FirebaseService {
 
   login(email: string, senha: string) {
     return signInWithEmailAndPassword(this.auth, email, senha)
+  }
+
+  listarUsuarios(){
+    return collectionData(this.usuariosCollection)
   }
 }

@@ -1,4 +1,6 @@
+import { FirebaseService } from './../shared/firebase.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-admin',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  usuarios$!: Observable<any>
 
-  constructor() { }
+  constructor(
+    private firebaseService: FirebaseService
+  ) { }
 
   ngOnInit(): void {
+    this.usuarios$ = this.firebaseService.listarUsuarios()
   }
 
 }

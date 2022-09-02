@@ -1,5 +1,6 @@
+import { UiServiceService } from './shared/ui-service.service';
 import { Component } from '@angular/core';
-import { CepService } from './shared/cep.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,11 @@ export class AppComponent {
   title = 'curso-web';
   colorRed = false;
 
+  isMobile$!: Observable<boolean>
+
   constructor(
-    private cepService: CepService
-  ) {}
+    private uiService: UiServiceService
+  ) {
+    this.isMobile$ = this.uiService.isMobile
+  }
 }

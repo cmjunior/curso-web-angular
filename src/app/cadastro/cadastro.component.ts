@@ -7,7 +7,10 @@ import { FirebaseService } from '../shared/firebase.service';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.scss']
+  styleUrls: ['./cadastro.component.scss'],
+  providers: [
+    CepService
+  ]
 })
 export class CadastroComponent implements OnInit {
   form!: FormGroup

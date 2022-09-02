@@ -1,7 +1,6 @@
 <div class="flex flex-column">
-    <app-header titulo="Projeto Connor"></app-header>
-    
-    <div style="margin-top: 450px">
+    <app-header titulo="Projeto Connor"></app-header>     
+    <div class="bg-gray-200" [ngStyle]="{'margin-top': isMobile$ ? '225px' : '400px' }">
         <router-outlet></router-outlet>
     </div>
 </div>

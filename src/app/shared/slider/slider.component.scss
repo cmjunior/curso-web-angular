@@ -1,7 +1,7 @@
 .slider-container {
     margin: 0 64px;
     width: calc(100vw - 128px);
-    display: inline-block;
+    display: flex;
     white-space: nowrap;
     overflow: auto;  
     position: relative;
@@ -22,9 +22,9 @@
 	bottom: 0;
     z-index: 99;
 
-    height: 64px;
-    line-height: 64px;  
-    width: 64px;
+    height: 48px;
+    line-height: 48px;  
+    width: 48px;
     font-size: 2em;
     font-weight: bold;
     border: 4px solid rgba($color: #454545, $alpha: 0.3);

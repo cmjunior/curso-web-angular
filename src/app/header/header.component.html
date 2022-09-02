@@ -1,12 +1,13 @@
 <div class="bg-center bg-no-repeat w-full" style="background-image: url('./assets/bg-image3.png'); background-size: 100vw; height: 20vw; position: fixed;">
     <div class="flex flex-row cards-container">
+        <app-slider [template]="menu"></app-slider>
     </div>
 </div>
 
-<app-slider [template]="menu"></app-slider>
 
 <ng-template #menu>
-    <app-card 
+    <app-card
+        [style]="{'display': 'flex'}" 
         *ngFor="let botao of botoes"            
         [style]="{'margin-right': '12px'}" 
         [texto]="botao.texto" 

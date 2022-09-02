@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
 
 export interface TextoBotoes {
   texto: string,
@@ -11,7 +11,10 @@ export interface TextoBotoes {
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements AfterViewInit {
+  @ViewChild('container') container!: ElementRef;
+  @ViewChild('slider') slider!: ElementRef;
+  
   @Input() template!: TemplateRef<any>
 
   scrollLeft = 0;
@@ -21,24 +24,24 @@ export class SliderComponent implements OnInit {
   buttonTopPosition = 0;
   scrollWidth = 200;
 
-  botoes: TextoBotoes[] = 
-  [
-    { texto: 'Início', textoBold: '', link: ''}, 
-    { texto: 'Recente', textoBold: '', link: ''}, 
-    { texto: 'Matérias', textoBold: '', link: ''},
-    { texto: 'Cadastro', textoBold: '', link: 'cadastro'}
-  ]
+  ngAfterViewInit(): void {    
+    this.scrollLeftMax = this.slider.nativeElement.scrollLeftMax;
+    this.containerWidth = this.container.nativeElement.offsetWidth;
+    this.sliderHeight = this.slider.nativeElement.offsetHeight;
 
-  constructor() { }
+    this.buttonTopPosition = this.sliderHeight/2 - 24;
+    this.scrollWidth = this.slider.nativeElement.childNodes[0].offsetWidth;
 
-  ngOnInit(): void {
+    this.slider.nativeElement.addEventListener('scroll', () => {
+      this.scrollLeft = this.slider.nativeElement.scrollLeft;
+    })
   }
 
   doScrollForward() {
-    
+    this.slider.nativeElement.scrollLeft += this.scrollWidth;
   }
 
   doScrollBack() {
-    
+    this.slider.nativeElement.scrollLeft -= this.scrollWidth;
   }
 }

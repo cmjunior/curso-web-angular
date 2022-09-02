@@ -12,12 +12,16 @@ import { CpfCnpjDirective } from './cpf-cnpj.directive';
 import { FormatarPipe } from './formatar.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SliderComponent } from './slider/slider.component';
+import { CardComponent } from '../card/card.component';
 
 @NgModule({
   declarations: [
+    CardComponent,
     CpfCnpjDirective,
     EnterAsTabDirective,
-    FormatarPipe
+    FormatarPipe,
+    SliderComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ToastModule
   ],
   exports: [
+    CardComponent,
     CardModule,
     ButtonModule,
     CpfCnpjDirective,
@@ -39,6 +44,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     InputTextModule,
     PasswordModule,
     ReactiveFormsModule,
+    SliderComponent,
     ToastModule
   ]
 })

@@ -8,11 +8,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BotaoComponent } from './botao/botao.component';
 
-import { CardComponent } from './card/card.component';
 import { MainComponent } from './main/main.component';
 import { getApp, initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth, initializeAuth, indexedDBLocalPersistence, inMemoryPersistence } from '@angular/fire/auth';
+import { provideAuth, initializeAuth, inMemoryPersistence } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { LoginComponent } from './login/login.component';
 
@@ -20,9 +19,9 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    BotaoComponent,
-    CardComponent,    
-    MainComponent, LoginComponent
+    BotaoComponent,    
+    MainComponent, 
+    LoginComponent
   ],
   imports: [
     BrowserModule,

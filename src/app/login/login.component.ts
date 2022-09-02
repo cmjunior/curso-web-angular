@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe( params => {
-      debugger
       if ( params.has('redirectURL') ) {
         this.redirectURL = params.get('redirectURL');
       }
